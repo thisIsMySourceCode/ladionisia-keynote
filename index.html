@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>La Dionysia</title>
+		<!-- IMPORTANT Keep CSS files order! LFP -->
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="plugin/menu/font-awesome/css/fontawesome.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>Slide 1</section>
+				<section data-markdown>
+				# Slide 2
+				- A
+				- B
+				- C
+				- F
+				</section>
+				<!--
+                    <section data-markdown="example.md"
+                    data-separator="^\n\n\n"
+                    data-separator-vertical="^\n\n"
+                    data-separator-notes="^Note:"
+                    data-charset="iso-8859-15">
+    
+                    Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
+                    For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
+    			-->
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+		<script src="plugin/menu/menu.js"></script>
+
+        <script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealZoom, RevealSearch, RevealChalkboard, RevealCustomControls, RevealMenu ],
+				customcontrols: {
+		controls: [
+      {
+			  id: 'toggle-overview',
+			  title: 'Toggle overview (O)',
+			  icon: '<i class="fa fa-th"></i>',
+			  action: 'Reveal.toggleOverview();'
+			},
+			{ icon: '<i class="fa fa-pen-square"></i>',
+			  title: 'Toggle chalkboard (B)',
+			  action: 'RevealChalkboard.toggleChalkboard();'
+			},
+			{ icon: '<i class="fa fa-pen"></i>',
+			  title: 'Toggle notes canvas (C)',
+			  action: 'RevealChalkboard.toggleNotesCanvas();'
+			}
+		]
+	},
+			});
+		</script>
+	</body>
+</html>
