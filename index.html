@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
 
-	<link rel="stylesheet" href="dist/theme/night.css" id="theme">
+	<link rel="stylesheet" href="dist/theme/lucho.css" id="theme">
 
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	<link rel="stylesheet" href="plugin/menu/font-awesome/css/fontawesome.css">
@@ -22,6 +22,26 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
+
+
+			<section>
+				<h3>Gantt Diagram</h3>
+				<div class="mermaid">
+				  <pre>
+					gantt
+					  title A Gantt Diagram
+					  dateFormat  YYYY-MM-DD
+					  section Section
+					  Sprint 1           :a1, 2014-01-01, 30d
+					  Sprint 2     :after a1  , 20d
+					  section Another
+					  Task in sec      :2014-01-12  , 12d
+					  another task     : 24d
+				  </pre>
+				</div>
+			  </section>
+
+
 			<section 
 			  data-markdown="assets/sprint1.md" 
 			  data-separator="^\-\-\-" 
@@ -30,7 +50,6 @@
 			  data-charset="utf-8"
 			></section>
 
-			<section></section>
 
 
 
@@ -55,6 +74,7 @@
 	<script src="plugin/chalkboard/plugin.js"></script>
 	<script src="plugin/customcontrols/plugin.js"></script>
 	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
     <script>
 		Reveal.initialize({
 			    hash: true,
@@ -69,7 +89,8 @@
 				RevealSearch, 
 				RevealChalkboard, 
 				RevealCustomControls, 
-				RevealMenu 
+				RevealMenu,
+				RevealMermaid
 			],
 	  customcontrols: {
 	    controls: [
